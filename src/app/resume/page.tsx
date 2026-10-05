@@ -18,12 +18,10 @@ export default function ResumePage() {
       <Container className="max-w-3xl">
         <div className="flex flex-col items-start gap-6 border-b border-line pb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+            <h1 className="font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
               {site.name}
             </h1>
-            <p className="mt-2 font-mono text-sm font-medium uppercase tracking-wide text-accent-strong">
-              {site.title}
-            </p>
+            <p className="mt-2 font-serif text-base italic text-accent-strong">{site.title}</p>
             <p className="mt-3 text-sm text-ink-muted">
               {site.email} &middot;{" "}
               <a href={site.social.linkedin} className="underline-offset-4 hover:underline">

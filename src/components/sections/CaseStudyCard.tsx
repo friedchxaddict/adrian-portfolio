@@ -7,27 +7,20 @@ import type { CaseStudy } from "@/content/caseStudies";
 export function CaseStudyCard({ study }: { study: CaseStudy }) {
   return (
     <article
-      className={`rounded-2xl border border-line p-7 sm:p-10 ${
-        study.featured ? "bg-ink text-paper" : "bg-paper"
+      className={`rounded-3xl p-7 shadow-[0_1px_2px_rgba(26,21,18,0.04),0_16px_32px_-20px_rgba(26,21,18,0.3)] sm:p-10 ${
+        study.featured ? "bg-ink text-paper" : "bg-surface"
       }`}
     >
-      <div className="flex flex-wrap items-center gap-2.5">
-        {study.categories.map((category) => (
-          <span
-            key={category}
-            className={`inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wide ${
-              study.featured
-                ? "border-paper/25 text-paper/80"
-                : "border-line bg-surface text-ink-muted"
-            }`}
-          >
-            {category}
-          </span>
-        ))}
-      </div>
+      <p
+        className={`font-mono text-[11px] font-medium uppercase tracking-[0.12em] ${
+          study.featured ? "text-ink-accent" : "text-accent-strong"
+        }`}
+      >
+        {study.categories.join("  ·  ")}
+      </p>
 
       <h3
-        className={`mt-5 text-2xl font-semibold tracking-tight sm:text-3xl ${
+        className={`mt-4 font-serif text-3xl font-medium tracking-tight sm:text-4xl ${
           study.featured ? "text-paper" : "text-ink"
         }`}
       >
@@ -57,7 +50,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
       ) : null}
 
       {study.lifecycle ? (
-        <div className="mt-9">
+        <div className="mt-10">
           <p
             className={`font-mono text-[11px] font-medium uppercase tracking-wide ${
               study.featured ? "text-paper/60" : "text-ink-muted"
@@ -72,7 +65,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
       ) : null}
 
       {study.scope ? (
-        <ul className="mt-8 flex flex-wrap gap-2.5" aria-label="Project scope">
+        <ul className="mt-8 flex flex-wrap gap-2" aria-label="Project scope">
           {study.scope.map((item) => (
             <li key={item}>
               <Tag>{item}</Tag>
@@ -89,14 +82,12 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         >
           Technical environment
         </p>
-        <ul className="mt-3 flex flex-wrap gap-2.5" aria-label="Technical environment">
+        <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technical environment">
           {study.stack.map((tech) => (
             <li key={tech}>
               <span
-                className={`inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] font-medium ${
-                  study.featured
-                    ? "border-paper/25 text-paper/80"
-                    : "border-line bg-surface text-ink-muted"
+                className={`inline-flex items-center rounded-full px-3 py-1 font-mono text-[11px] font-medium ${
+                  study.featured ? "bg-paper/10 text-paper/80" : "bg-ink/[0.06] text-ink-muted"
                 }`}
               >
                 {tech}
@@ -107,13 +98,13 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
       </div>
 
       {study.incident ? (
-        <div className="mt-8">
+        <div className="mt-9">
           {study.featured ? (
             <aside
               aria-label={study.incident.title}
-              className="rounded-2xl border border-paper/20 bg-paper/5 p-6 sm:p-7"
+              className="border-l-2 border-ink-accent pl-5"
             >
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-paper/80">
+              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-accent">
                 {study.incident.title}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-paper/75 sm:text-base">

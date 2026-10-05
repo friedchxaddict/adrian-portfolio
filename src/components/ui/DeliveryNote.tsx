@@ -5,10 +5,7 @@ interface DeliveryNoteProps {
 
 export function DeliveryNote({ title, children }: DeliveryNoteProps) {
   return (
-    <aside
-      aria-label={title}
-      className="rounded-2xl border border-line bg-surface p-6 sm:p-7"
-    >
+    <aside aria-label={title} className="border-l-2 border-accent pl-5">
       <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-strong">
         {title}
       </p>

@@ -4,6 +4,7 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   align?: "left" | "center";
+  tone?: "light" | "dark";
 }
 
 export function SectionHeading({
@@ -12,23 +13,43 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  tone = "light",
 }: SectionHeadingProps) {
+  const isDark = tone === "dark";
+
   return (
-    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      <div
-        className={`flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent ${
-          align === "center" ? "justify-center" : ""
+    <div
+      className={`relative ${align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}`}
+    >
+      <span
+        aria-hidden="true"
+        className={`pointer-events-none absolute -top-10 select-none font-serif text-[7rem] font-medium leading-none sm:text-[9rem] ${
+          align === "center" ? "left-1/2 -translate-x-1/2" : "-left-1 sm:-left-2"
+        } ${isDark ? "text-paper/[0.06]" : "text-ink/[0.05]"}`}
+      >
+        {index}
+      </span>
+
+      <p
+        className={`relative font-serif text-lg italic ${
+          isDark ? "text-ink-accent" : "text-accent-strong"
         }`}
       >
-        <span aria-hidden="true">{index}</span>
-        <span className="h-px w-6 bg-accent/40" aria-hidden="true" />
-        <span>{eyebrow}</span>
-      </div>
-      <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+        {eyebrow}
+      </p>
+      <h2
+        className={`relative mt-2 text-balance font-serif text-3xl font-medium tracking-tight sm:text-4xl ${
+          isDark ? "text-ink-paper" : "text-ink"
+        }`}
+      >
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+        <p
+          className={`relative mt-4 text-base leading-relaxed sm:text-lg ${
+            isDark ? "text-ink-muted-paper" : "text-ink-muted"
+          }`}
+        >
           {description}
         </p>
       ) : null}

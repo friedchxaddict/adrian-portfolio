@@ -4,14 +4,19 @@ import { aboutHighlights, aboutParagraphs } from "@/content/about";
 
 export function About() {
   return (
-    <section id="about" className="border-t border-line/70 py-20 sm:py-28">
+    <section id="about" className="bg-ink py-20 text-ink-paper sm:py-28">
       <Container className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
         <div>
-          <SectionHeading index="01" eyebrow="About" title="From the floor to the executive board" />
+          <SectionHeading
+            index="01"
+            eyebrow="About"
+            title="From the floor to the executive board"
+            tone="dark"
+          />
 
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-ink-muted sm:text-lg">
+          <div className="mt-8 space-y-5 text-base leading-relaxed text-ink-muted-paper sm:text-lg">
             {aboutParagraphs.map((paragraph, i) => (
-              <p key={i} className={i === 0 ? "text-ink" : undefined}>
+              <p key={i} className={i === 0 ? "text-ink-paper" : undefined}>
                 {paragraph}
               </p>
             ))}
@@ -19,13 +24,15 @@ export function About() {
         </div>
 
         <div className="lg:pt-2">
-          <dl className="space-y-6 rounded-2xl border border-line bg-surface p-7">
+          <dl className="space-y-6 border-l border-ink-paper/15 pl-6">
             {aboutHighlights.map((item) => (
-              <div key={item.label} className="border-b border-line pb-5 last:border-0 last:pb-0">
-                <dt className="font-mono text-[11px] font-medium uppercase tracking-wide text-ink-muted">
+              <div key={item.label}>
+                <dt className="font-mono text-[11px] font-medium uppercase tracking-wide text-ink-muted-paper">
                   {item.label}
                 </dt>
-                <dd className="mt-1.5 text-lg font-semibold text-ink">{item.value}</dd>
+                <dd className="mt-1.5 font-serif text-xl font-medium text-ink-paper">
+                  {item.value}
+                </dd>
               </div>
             ))}
           </dl>

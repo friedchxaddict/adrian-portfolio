@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-line/70 py-20 sm:py-28">
+    <section id="contact" className="bg-ink texture-dots-dark py-20 text-ink-paper sm:py-28">
       <Container className="flex flex-col items-center text-center">
         <SectionHeading
           index="05"
@@ -14,15 +14,16 @@ export function Contact() {
           title="Let's talk about your team's next delivery challenge"
           description="Open to Technical Program Manager, Technical Project Manager, Program Manager, and Technical Product / Product Operations roles."
           align="center"
+          tone="dark"
         />
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-          <ButtonLink href={`mailto:${site.email}`} variant="primary">
+          <ButtonLink href={`mailto:${site.email}`} variant="primaryOnDark">
             Email Adrian
           </ButtonLink>
           <ButtonLink
             href={site.resumeHref}
-            variant="secondary"
+            variant="secondaryOnDark"
             icon={<ArrowUpRightIcon className="h-4 w-4" />}
           >
             View Résumé
@@ -34,7 +35,7 @@ export function Contact() {
             href={site.social.linkedin}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="flex items-center gap-2 text-sm text-ink-muted-paper transition-colors hover:text-ink-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <LinkedInIcon className="h-4 w-4" />
             LinkedIn
@@ -43,7 +44,7 @@ export function Contact() {
             href={site.social.github}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="flex items-center gap-2 text-sm text-ink-muted-paper transition-colors hover:text-ink-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <GitHubIcon className="h-4 w-4" />
             GitHub

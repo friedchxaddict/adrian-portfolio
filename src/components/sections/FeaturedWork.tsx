@@ -5,7 +5,7 @@ import { caseStudies } from "@/content/caseStudies";
 
 export function FeaturedWork() {
   return (
-    <section id="work" className="border-t border-line/70 py-20 sm:py-28">
+    <section id="work" className="py-20 sm:py-28">
       <Container>
         <SectionHeading
           index="03"

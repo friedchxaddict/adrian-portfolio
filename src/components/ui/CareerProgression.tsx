@@ -20,7 +20,9 @@ export function CareerProgression({ stages }: CareerProgressionProps) {
             </span>
             <span
               className={`text-sm font-medium sm:text-base ${
-                i === stages.length - 1 ? "text-ink" : "text-ink-muted"
+                i === stages.length - 1
+                  ? "font-serif text-lg italic text-ink"
+                  : "text-ink-muted"
               }`}
             >
               {stage}
