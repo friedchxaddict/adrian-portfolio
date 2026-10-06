@@ -21,7 +21,7 @@ export function CareerProgression({ stages }: CareerProgressionProps) {
             <span
               className={`text-sm font-medium sm:text-base ${
                 i === stages.length - 1
-                  ? "font-serif text-lg italic text-ink"
+                  ? "font-serif text-lg font-medium text-ink"
                   : "text-ink-muted"
               }`}
             >

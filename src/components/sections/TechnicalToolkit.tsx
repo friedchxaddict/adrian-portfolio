@@ -10,7 +10,7 @@ export function TechnicalToolkit() {
         <SectionHeading
           index="04"
           eyebrow="Technical Toolkit"
-          title="Fluent across program delivery and the stack underneath it"
+          title="Technical fluency across delivery and development"
           description="Organized by how the work actually breaks down — not a logo wall."
         />
 

@@ -13,7 +13,7 @@ export function SiteHeader() {
       <Container className="flex h-full items-center justify-between">
         <Link
           href="#top"
-          className="font-serif text-lg font-medium italic tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="font-serif text-lg font-medium tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Adrian Fontanilla
         </Link>

@@ -11,7 +11,7 @@ export function Contact() {
         <SectionHeading
           index="05"
           eyebrow="Contact"
-          title="Let's talk about your team's next delivery challenge"
+          title="Looking for the next team to help lead delivery"
           description="Open to Technical Program Manager, Technical Project Manager, Program Manager, and Technical Product / Product Operations roles."
           align="center"
           tone="dark"

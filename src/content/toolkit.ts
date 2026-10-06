@@ -28,6 +28,7 @@ export const toolkit: ToolkitCategory[] = [
       "HTML/CSS",
       "Python",
       "REST APIs",
+      "Postman",
       "Git/GitHub",
     ],
   },
@@ -44,7 +45,7 @@ export const toolkit: ToolkitCategory[] = [
   },
   {
     category: "Quality",
-    skills: ["QA Coordination", "Cypress", "Selenium", "Release Validation"],
+    skills: ["QA Coordination", "Cypress", "Release Validation"],
   },
   {
     category: "AI",

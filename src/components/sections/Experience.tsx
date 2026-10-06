@@ -11,7 +11,7 @@ export function Experience() {
           index="02"
           eyebrow="Experience"
           title="A path from writing code to running delivery"
-          description="One company, three stages of growth — from shipping features to running the engineering team's delivery process end to end."
+          description="One company, three stages of growth — from software development to leading the engineering team's delivery process end to end."
         />
 
         <div className="mt-14">
@@ -33,7 +33,7 @@ export function Experience() {
                 </p>
               </div>
 
-              <p className="mt-2 font-serif text-base italic text-accent-strong">
+              <p className="mt-2 font-serif text-base text-accent-strong">
                 {role.progressionNote}
               </p>
 

@@ -40,7 +40,6 @@ export const caseStudies: CaseStudy[] = [
       "GitHub",
       "GitHub Actions",
       "Google Cloud Platform",
-      "Selenium",
       "Cypress",
     ],
     incident: {
