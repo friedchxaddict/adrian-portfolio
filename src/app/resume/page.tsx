@@ -23,17 +23,23 @@ export default function ResumePage() {
             </h1>
             <p className="mt-2 font-serif text-base italic text-accent-strong">{site.title}</p>
             <p className="mt-3 text-sm text-ink-muted">
-              {site.email} &middot;{" "}
+              {site.location} &middot; {site.email} &middot;{" "}
               <a href={site.social.linkedin} className="underline-offset-4 hover:underline">
                 LinkedIn
-              </a>{" "}
-              &middot;{" "}
-              <a href={site.social.github} className="underline-offset-4 hover:underline">
-                GitHub
               </a>
             </p>
           </div>
-          <PrintButton />
+          <div className="flex items-center gap-4 print:hidden">
+            <a
+              href={site.resumeHref}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-sm font-medium text-ink underline decoration-accent/60 decoration-2 underline-offset-[6px] hover:text-accent-strong hover:decoration-accent-strong"
+            >
+              Download PDF
+            </a>
+            <PrintButton />
+          </div>
         </div>
 
         <section className="mt-10" aria-labelledby="resume-summary">
@@ -61,7 +67,9 @@ export default function ResumePage() {
               <div key={role.company}>
                 <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
                   <h3 className="text-lg font-semibold text-ink">{role.title}</h3>
-                  <p className="text-sm font-medium text-ink-muted">{role.company}</p>
+                  <p className="text-sm font-medium text-ink-muted">
+                    {role.company} &middot; {role.dates}
+                  </p>
                 </div>
                 <p className="mt-1 text-sm font-medium text-accent-strong">
                   {role.progressionNote}
@@ -97,8 +105,8 @@ export default function ResumePage() {
         </section>
 
         <p className="mt-6 border-t border-line pt-6 font-mono text-[11px] text-ink-muted print:hidden">
-          Prefer a traditional PDF? This page is built to print cleanly — use &ldquo;Save as
-          PDF&rdquo; above, or swap this route for an uploaded résumé file whenever one is ready.
+          Prefer the original PDF? Use &ldquo;Download PDF&rdquo; above. This page is a browsable,
+          print-friendly summary of the same résumé.
         </p>
       </Container>
     </article>

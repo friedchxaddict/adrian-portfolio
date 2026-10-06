@@ -29,7 +29,7 @@ export function Experience() {
                   {role.title}
                 </h3>
                 <p className="font-mono text-xs font-medium uppercase tracking-wide text-ink-muted">
-                  {role.company}
+                  {role.company} &middot; {role.dates}
                 </p>
               </div>
 

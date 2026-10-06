@@ -33,13 +33,16 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const classes = `${base} ${variants[variant]} ${className}`;
 
-  if (external || href.startsWith("http") || href.startsWith("mailto:")) {
+  const isExternal = external || href.startsWith("http") || href.startsWith("mailto:");
+
+  if (isExternal) {
+    const opensNewTab = external || href.startsWith("http");
     return (
       <a
         href={href}
         className={classes}
-        target={href.startsWith("http") ? "_blank" : undefined}
-        rel={href.startsWith("http") ? "noreferrer noopener" : undefined}
+        target={opensNewTab ? "_blank" : undefined}
+        rel={opensNewTab ? "noreferrer noopener" : undefined}
       >
         {children}
         {icon}

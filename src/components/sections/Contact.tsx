@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { ArrowUpRightIcon, GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
+import { ArrowUpRightIcon, LinkedInIcon } from "@/components/ui/Icons";
 import { site } from "@/content/site";
 
 export function Contact() {
@@ -25,6 +25,7 @@ export function Contact() {
             href={site.resumeHref}
             variant="secondaryOnDark"
             icon={<ArrowUpRightIcon className="h-4 w-4" />}
+            external
           >
             View Résumé
           </ButtonLink>
@@ -39,15 +40,6 @@ export function Contact() {
           >
             <LinkedInIcon className="h-4 w-4" />
             LinkedIn
-          </a>
-          <a
-            href={site.social.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex items-center gap-2 text-sm text-ink-muted-paper transition-colors hover:text-ink-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            <GitHubIcon className="h-4 w-4" />
-            GitHub
           </a>
         </div>
       </Container>

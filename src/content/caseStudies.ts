@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
       "Cloud Delivery",
     ],
     summary:
-      "At TERN, I managed the development and delivery of our TIDAL platform, coordinating frontend, backend API, QA, and cloud deployment work across a cross-functional engineering team. The complexity came from managing dependencies across multiple applications and APIs, balancing shifting priorities within two-week sprints, and keeping development, testing, and releases aligned while working with a lean startup team.",
+      "At Tern Computers / Opes Associates, I directed engineering delivery for TIDAL, our core platform, coordinating a cross-functional team of 15+ across frontend, backend, QA, DevOps, and security. Working with founders and the board, I helped drive architecture decisions — including a monorepo migration, shared authentication, and CI/CD deployment strategy — while weighing technical tradeoffs and allocating resources to ship three website iterations and two major TIDAL releases. I stayed hands-on throughout, contributing to frontend development, production troubleshooting, and deployments, including integrating our G API and Tern API services into TIDAL's compiler sandbox.",
     lifecycle: ["Planning", "Development", "QA", "Release", "Validation"],
     stack: [
       "Next.js",

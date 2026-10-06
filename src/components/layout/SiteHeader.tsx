@@ -34,7 +34,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 sm:flex">
-          <ButtonLink href={site.resumeHref} variant="secondary" className="px-5 py-2 text-xs">
+          <ButtonLink
+            href={site.resumeHref}
+            variant="secondary"
+            className="px-5 py-2 text-xs"
+            external
+          >
             View Résumé
           </ButtonLink>
         </div>

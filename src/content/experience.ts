@@ -6,6 +6,7 @@ export const careerProgression = [
 
 export interface Role {
   company: string;
+  dates: string;
   title: string;
   progressionNote: string;
   summary: string;
@@ -14,11 +15,12 @@ export interface Role {
 
 export const roles: Role[] = [
   {
-    company: "TERN / Opes Financial",
+    company: "Tern Computers / Opes Associates",
+    dates: "2024–2026",
     title: "COO — Technical Program & Delivery Leadership",
     progressionNote: "Progressed from Software Developer to COO within the first year",
     summary:
-      "Led day-to-day engineering delivery for a startup software team, coordinating developers and QA across product development, APIs, infrastructure, testing, and releases.",
+      "Led day-to-day engineering delivery for a cross-functional team of 15+ spanning frontend, backend, QA, DevOps, and security — coordinating product development, APIs, infrastructure, testing, and releases for a growth-stage startup.",
     highlights: [
       "Two-week Agile/Scrum sprint cadence",
       "Sprint planning",

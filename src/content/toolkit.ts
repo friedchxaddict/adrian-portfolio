@@ -1,6 +1,8 @@
 export interface ToolkitCategory {
   category: string;
   skills: string[];
+  /** Short supporting note shown under the category's skill chips. */
+  note?: string;
 }
 
 export const toolkit: ToolkitCategory[] = [
@@ -19,6 +21,16 @@ export const toolkit: ToolkitCategory[] = [
     ],
   },
   {
+    category: "Team Leadership",
+    skills: [
+      "Technical Hiring",
+      "Interviewing",
+      "Developer Onboarding",
+      "Mentoring",
+      "Performance Management",
+    ],
+  },
+  {
     category: "Development",
     skills: [
       "JavaScript",
@@ -27,6 +39,7 @@ export const toolkit: ToolkitCategory[] = [
       "Next.js",
       "HTML/CSS",
       "Python",
+      "Node.js",
       "REST APIs",
       "Postman",
       "Git/GitHub",
@@ -54,5 +67,6 @@ export const toolkit: ToolkitCategory[] = [
       "AI workflow automation",
       "LLM-assisted research and problem solving",
     ],
+    note: "Example: an AI-assisted pull request review workflow built with GitHub Actions, local LLMs, and Jira.",
   },
 ];

@@ -28,6 +28,9 @@ export function TechnicalToolkit() {
                   </li>
                 ))}
               </ul>
+              {group.note ? (
+                <p className="mt-4 text-sm leading-relaxed text-ink-muted">{group.note}</p>
+              ) : null}
             </div>
           ))}
         </div>

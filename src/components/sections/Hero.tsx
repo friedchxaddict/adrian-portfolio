@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { ArrowUpRightIcon, GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
+import { ArrowUpRightIcon, LinkedInIcon } from "@/components/ui/Icons";
 import { site } from "@/content/site";
 
 /**
@@ -68,6 +68,7 @@ export function Hero() {
               href={site.resumeHref}
               variant="secondary"
               icon={<ArrowUpRightIcon className="h-4 w-4" />}
+              external
             >
               View Résumé
             </ButtonLink>
@@ -83,16 +84,6 @@ export function Hero() {
             >
               <LinkedInIcon className="h-4 w-4" />
               LinkedIn
-            </a>
-            <a
-              href={site.social.github}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="Adrian Fontanilla on GitHub"
-              className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              <GitHubIcon className="h-4 w-4" />
-              GitHub
             </a>
           </div>
         </div>

@@ -8,21 +8,20 @@
 export const site = {
   name: "Adrian Fontanilla",
   title: "Technical Program Manager",
+  location: "Chicago, IL",
   tagline:
     "Bringing a software development background to technical program leadership, engineering delivery, and cross-functional execution.",
   description:
     "Adrian Fontanilla is a Technical Program Manager with a background in software development and startup technical leadership — focused on engineering delivery, cross-functional execution, and helping teams ship.",
   // TODO: replace with the real production domain once deployed.
   url: "https://adrianfontanilla.com",
-  // TODO: replace with Adrian's real contact email.
-  email: "hello@adrianfontanilla.com",
+  email: "adrianfontanilla@gmail.com",
   social: {
-    // TODO: replace with Adrian's real LinkedIn URL.
-    linkedin: "https://www.linkedin.com/in/adrianfontanilla",
-    // TODO: replace with Adrian's real GitHub URL.
-    github: "https://github.com/adrianfontanilla",
+    linkedin: "https://www.linkedin.com/in/adrian-f-8a722022a",
   },
-  resumeHref: "/resume",
+  // Real résumé PDF, served from /public/resume. The auto-generated /resume
+  // page remains live as a secondary, unlinked fallback.
+  resumeHref: "/resume/Adrian-Fontanilla-Resume-TPM.pdf",
 } as const;
 
 export const navLinks = [

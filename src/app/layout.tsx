@@ -63,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     jobTitle: site.title,
     description: site.tagline,
     url: site.url,
-    sameAs: [site.social.linkedin, site.social.github],
+    sameAs: [site.social.linkedin],
   };
 
   return (

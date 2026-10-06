@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/Icons";
+import { LinkedInIcon, MailIcon } from "@/components/ui/Icons";
 import { site } from "@/content/site";
 
 export function SiteFooter() {
@@ -28,15 +28,6 @@ export function SiteFooter() {
             className="text-ink-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <LinkedInIcon className="h-5 w-5" />
-          </a>
-          <a
-            href={site.social.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Adrian Fontanilla on GitHub"
-            className="text-ink-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            <GitHubIcon className="h-5 w-5" />
           </a>
         </div>
       </Container>
