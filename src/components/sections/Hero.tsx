@@ -37,8 +37,8 @@ const THREADS = [
   },
   {
     label: "Infrastructure",
-    d: "M10,230 C140,230 170,180 300,130",
-    dot: { x: 143, y: 204 },
+    d: "M10,230 C140,230 170,155 300,130",
+    dot: { x: 143, y: 196 },
     color: "#b8862e",
     width: 2,
     opacity: 0.7,
