@@ -7,7 +7,8 @@ export interface CaseStudy {
   slug: string;
   title: string;
   categories: string[];
-  summary: string;
+  /** One paragraph, or several for longer descriptions that need to scan easily. */
+  summary: string | string[];
   /** Delivery lifecycle steps shown as a visual process flow. */
   lifecycle?: string[];
   /** Scope of work, used for the "evidence of hands-on" case study. */
@@ -27,8 +28,11 @@ export const caseStudies: CaseStudy[] = [
       "Software Development",
       "Cloud Delivery",
     ],
-    summary:
-      "At Tern Computers / Opes Associates, I directed engineering delivery for TIDAL, our core platform, coordinating a cross-functional team of 15+ across frontend, backend, QA, DevOps, and security. Working with founders and the board, I helped drive architecture decisions — including a monorepo migration, shared authentication, and CI/CD deployment strategy — while weighing technical tradeoffs and allocating resources to ship three website iterations and two major TIDAL releases. I stayed hands-on throughout, contributing to frontend development, production troubleshooting, and deployments, including integrating our G API and Tern API services into TIDAL's compiler sandbox.",
+    summary: [
+      "TIDAL was an interactive, browser-based compiler and code execution sandbox built to demonstrate ternary computing. Users could write C-like code, translate it through a RISC-V-inspired ternary representation using −1, 0, and +1, and run programs to view their output — from “Hello World” to simple arithmetic. The interface presented the G, TERN, and BTMC representations side by side, with controls for running code.",
+      "At Tern Computers / Opes Associates, I led engineering delivery for TIDAL with a cross-functional team of up to 15 direct reports at peak — coordinating frontend, backend, QA, DevOps, CI/CD, and security work, and managing sprint execution, technical priorities, dependencies, testing, and releases. Working with the founders and executive board, I helped drive architecture decisions — including a monorepo migration, shared authentication, and CI/CD deployment strategy — while weighing technical tradeoffs and allocating resources to ship three website iterations and two major TIDAL releases.",
+      "I stayed hands-on throughout, contributing frontend development, production troubleshooting, and deployments, and helped coordinate the integration of the G API and TERN API services into TIDAL's compiler sandbox.",
+    ],
     lifecycle: ["Planning", "Development", "QA", "Release", "Validation"],
     stack: [
       "Next.js",
@@ -44,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     incident: {
       title: "Delivery Note — Production Incident",
-      body: "During a release, the production deployment began returning 502 errors. I coordinated the incident response with engineering — working through the deployment pipeline step by step to help isolate the cause, which was eventually traced to corrupted node_modules introduced during the build process. I helped guide the team's troubleshooting, tracked the fix (resolved through a Next.js version update) through to validation, and used the incident afterward to tighten our release-validation checklist.",
+      body: "During a release, the production deployment began returning 502 errors. I investigated directly — working through the deployment and build process step by step and tracing the failure to corrupted node_modules introduced during the build. I resolved it through a Next.js version update, verified the fix in production, and afterward used the incident to tighten our release-validation checklist.",
     },
     featured: true,
   },
@@ -53,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Counting House Bookkeeping",
     categories: ["Web Development", "Design & Delivery"],
     summary:
-      "An end-to-end client website project, handled independently from first conversation to live launch — evidence that the technical fluency behind the program leadership is still hands-on today.",
+      "A production website for a bookkeeping firm, delivered independently from first conversation to live launch — requirements, design, build, deployment, and domain migration. Evidence that the technical fluency behind the program leadership is still hands-on.",
     scope: [
       "Requirements",
       "Design",

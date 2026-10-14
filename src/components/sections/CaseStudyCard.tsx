@@ -7,13 +7,13 @@ import type { CaseStudy } from "@/content/caseStudies";
 export function CaseStudyCard({ study }: { study: CaseStudy }) {
   return (
     <article
-      className={`rounded-3xl p-7 shadow-[0_1px_2px_rgba(26,21,18,0.04),0_16px_32px_-20px_rgba(26,21,18,0.3)] sm:p-10 ${
-        study.featured ? "bg-ink text-paper" : "bg-surface"
+      className={`rounded-3xl p-7 shadow-[0_1px_2px_rgba(37,43,45,0.04),0_16px_32px_-20px_rgba(37,43,45,0.3)] sm:p-10 ${
+        study.featured ? "bg-slate text-paper" : "bg-surface"
       }`}
     >
       <p
         className={`font-mono text-[11px] font-medium uppercase tracking-[0.12em] ${
-          study.featured ? "text-ink-accent" : "text-accent-strong"
+          study.featured ? "text-copper-light" : "text-copper-strong"
         }`}
       >
         {study.categories.join("  ·  ")}
@@ -27,13 +27,15 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         {study.title}
       </h3>
 
-      <p
-        className={`mt-4 max-w-3xl text-base leading-relaxed sm:text-lg ${
+      <div
+        className={`mt-4 max-w-3xl space-y-4 text-base leading-relaxed sm:text-lg ${
           study.featured ? "text-paper/75" : "text-ink-muted"
         }`}
       >
-        {study.summary}
-      </p>
+        {(Array.isArray(study.summary) ? study.summary : [study.summary]).map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
+      </div>
 
       {study.link ? (
         <a
@@ -53,13 +55,17 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         <div className="mt-10">
           <p
             className={`font-mono text-[11px] font-medium uppercase tracking-wide ${
-              study.featured ? "text-paper/60" : "text-ink-muted"
+              study.featured ? "text-copper-light" : "text-copper-strong"
             }`}
           >
             Delivery lifecycle
           </p>
           <div className={study.featured ? "mt-3 text-paper/70" : "mt-3 text-ink-muted"}>
-            <ProcessFlow steps={study.lifecycle} variant="labeled" />
+            <ProcessFlow
+              steps={study.lifecycle}
+              variant="labeled"
+              tone={study.featured ? "dark" : "light"}
+            />
           </div>
         </div>
       ) : null}
@@ -77,7 +83,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
       <div className="mt-8">
         <p
           className={`font-mono text-[11px] font-medium uppercase tracking-wide ${
-            study.featured ? "text-paper/60" : "text-ink-muted"
+            study.featured ? "text-copper-light" : "text-copper-strong"
           }`}
         >
           Technical environment
@@ -102,7 +108,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.featured ? (
             <aside
               aria-label={study.incident.title}
-              className="border-l-2 border-ink-accent pl-5"
+              className="border-l-2 border-copper pl-5"
             >
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-accent">
                 {study.incident.title}

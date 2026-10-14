@@ -6,13 +6,13 @@ import { site } from "@/content/site";
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-ink texture-dots-dark py-20 text-ink-paper sm:py-28">
+    <section id="contact" className="bg-slate texture-dots-dark py-20 text-ink-paper sm:py-28">
       <Container className="flex flex-col items-center text-center">
         <SectionHeading
           index="05"
           eyebrow="Contact"
           title="Looking for the next team to help lead delivery"
-          description="Open to Technical Program Manager, Technical Project Manager, Program Manager, and Technical Product / Product Operations roles."
+          description="Open to Technical Program Management, Engineering Management, Technical Project Management, and related technical leadership opportunities."
           align="center"
           tone="dark"
         />

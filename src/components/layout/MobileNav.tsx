@@ -5,9 +5,11 @@ import { CloseIcon, MenuIcon } from "@/components/ui/Icons";
 
 interface MobileNavProps {
   links: readonly { label: string; href: string }[];
+  /** External résumé link, shown last since the header button is hidden on mobile. */
+  resumeHref: string;
 }
 
-export function MobileNav({ links }: MobileNavProps) {
+export function MobileNav({ links, resumeHref }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
@@ -65,6 +67,17 @@ export function MobileNav({ links }: MobileNavProps) {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={resumeHref}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-ink underline decoration-copper/70 decoration-2 underline-offset-[6px] hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  View Résumé
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

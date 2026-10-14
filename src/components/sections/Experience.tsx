@@ -22,7 +22,7 @@ export function Experience() {
           {roles.map((role) => (
             <article
               key={role.company}
-              className="rounded-3xl bg-surface p-7 shadow-[0_1px_2px_rgba(26,21,18,0.04),0_12px_28px_-18px_rgba(26,21,18,0.25)] sm:p-10"
+              className="rounded-3xl bg-surface p-7 shadow-[0_1px_2px_rgba(37,43,45,0.04),0_12px_28px_-18px_rgba(37,43,45,0.25)] sm:p-10"
             >
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                 <h3 className="font-serif text-2xl font-medium text-ink sm:text-3xl">
@@ -33,7 +33,7 @@ export function Experience() {
                 </p>
               </div>
 
-              <p className="mt-2 font-serif text-base text-accent-strong">
+              <p className="mt-2 font-serif text-base text-copper-strong">
                 {role.progressionNote}
               </p>
 

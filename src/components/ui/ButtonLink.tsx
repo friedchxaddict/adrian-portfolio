@@ -16,11 +16,11 @@ const base =
 const variants: Record<string, string> = {
   primary: "bg-ink text-paper hover:bg-accent-strong",
   secondary:
-    "text-ink underline decoration-accent/60 decoration-2 underline-offset-[6px] hover:text-accent-strong hover:decoration-accent-strong",
+    "text-ink underline decoration-copper/70 decoration-2 underline-offset-[6px] hover:text-copper-strong hover:decoration-copper-strong",
   ghost: "text-ink-muted hover:text-ink",
-  primaryOnDark: "bg-paper text-ink hover:bg-ink-accent",
+  primaryOnDark: "bg-paper text-ink hover:bg-copper-light",
   secondaryOnDark:
-    "text-ink-paper underline decoration-ink-accent/70 decoration-2 underline-offset-[6px] hover:text-ink-accent hover:decoration-ink-accent",
+    "text-ink-paper underline decoration-copper-light/70 decoration-2 underline-offset-[6px] hover:text-copper-light hover:decoration-copper-light",
 };
 
 export function ButtonLink({

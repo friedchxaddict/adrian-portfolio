@@ -44,7 +44,7 @@ export function SiteHeader() {
           </ButtonLink>
         </div>
 
-        <MobileNav links={navLinks} />
+        <MobileNav links={navLinks} resumeHref={site.resumeHref} />
       </Container>
     </header>
   );

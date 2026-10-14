@@ -3,22 +3,31 @@
 :root {
   --header-height: 72px;
 
-  /* Warm editorial palette — intentionally not cool-gray/blue "design system" neutrals */
-  --color-paper: #f6f1e7;
-  --color-paper-deep: #efe7d6;
-  --color-ink: #1a1512;
-  --color-ink-muted: #5c5248;
-  --color-line: #e1d6bf;
-  --color-surface: #efe7d6;
+  /* Slate & Teal palette — neutral light surfaces, deep slate dark sections,
+     teal for interactive/diagram accents, copper used sparingly for warmth */
+  --color-paper: #f5f5f2; /* main light background */
+  --color-paper-deep: #e5e7e6; /* alternate light background */
+  --color-ink: #252b2d; /* primary text on light */
+  --color-ink-muted: #535d60; /* secondary text on light */
+  --color-line: #d4d8d6; /* borders and dividers */
+  --color-surface: #ffffff; /* card backgrounds */
+  --color-slate: #263d49; /* dark section backgrounds */
 
-  --color-accent: #bb5b2e;
-  --color-accent-strong: #8a3f1e;
+  --color-accent: #397e80; /* teal */
+  --color-accent-strong: #2f6b6d; /* deeper teal for hover + small text */
+  --color-copper: #b8734f; /* warm accent — decorative elements on light */
+  --color-copper-strong: #9c5d3a; /* copper for small text on light (AA) */
+  --color-copper-light: #d49a76; /* copper for use on dark slate */
 
-  /* Used only inside dark (ink) sections for sufficient contrast */
-  --color-ink-paper: #f6f1e7;
-  --color-ink-muted-paper: #c7bba5;
-  --color-ink-line: rgba(246, 241, 231, 0.14);
-  --color-ink-accent: #e3a05f;
+  /* Decorative section numerals (opacity applied at the use site) */
+  --color-numeral: #c5cac7;
+  --color-numeral-dark: #7197a4;
+
+  /* Used only inside dark (slate) sections for sufficient contrast */
+  --color-ink-paper: #f5f5f2;
+  --color-ink-muted-paper: #b3bfc4;
+  --color-ink-line: rgba(245, 245, 242, 0.14);
+  --color-ink-accent: #8fc1c8;
 }
 
 @theme inline {
@@ -28,8 +37,14 @@
   --color-ink-muted: var(--color-ink-muted);
   --color-line: var(--color-line);
   --color-surface: var(--color-surface);
+  --color-slate: var(--color-slate);
   --color-accent: var(--color-accent);
   --color-accent-strong: var(--color-accent-strong);
+  --color-copper: var(--color-copper);
+  --color-copper-strong: var(--color-copper-strong);
+  --color-copper-light: var(--color-copper-light);
+  --color-numeral: var(--color-numeral);
+  --color-numeral-dark: var(--color-numeral-dark);
   --color-ink-paper: var(--color-ink-paper);
   --color-ink-muted-paper: var(--color-ink-muted-paper);
   --color-ink-accent: var(--color-ink-accent);
@@ -58,14 +73,14 @@ body {
 /* Subtle graph-paper texture — a deliberate, designed texture (not grain/noise),
    used sparingly on the hero and dark bookend sections for tactile depth. */
 .texture-dots {
-  background-image: radial-gradient(circle at 1px 1px, rgba(26, 21, 18, 0.1) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(37, 43, 45, 0.1) 1px, transparent 0);
   background-size: 20px 20px;
 }
 
 .texture-dots-dark {
   background-image: radial-gradient(
     circle at 1px 1px,
-    rgba(246, 241, 231, 0.09) 1px,
+    rgba(245, 245, 242, 0.09) 1px,
     transparent 0
   );
   background-size: 20px 20px;

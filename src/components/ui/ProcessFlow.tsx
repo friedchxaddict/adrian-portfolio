@@ -2,6 +2,8 @@ interface ProcessFlowProps {
   steps: string[];
   /** "abstract" renders unlabeled nodes; "labeled" shows step names (e.g. lifecycle diagrams). */
   variant?: "abstract" | "labeled";
+  /** Match the surrounding surface so step labels keep sufficient contrast. */
+  tone?: "light" | "dark";
   className?: string;
 }
 
@@ -10,8 +12,14 @@ interface ProcessFlowProps {
  * Uses flex layout (not scaled SVG) so nodes stay perfectly circular at any width.
  * Animates once on mount via CSS only (no client JS), respects prefers-reduced-motion.
  */
-export function ProcessFlow({ steps, variant = "labeled", className = "" }: ProcessFlowProps) {
+export function ProcessFlow({
+  steps,
+  variant = "labeled",
+  tone = "light",
+  className = "",
+}: ProcessFlowProps) {
   const count = steps.length;
+  const isDark = tone === "dark";
 
   return (
     <div className={`process-flow ${className}`}>
@@ -42,9 +50,13 @@ export function ProcessFlow({ steps, variant = "labeled", className = "" }: Proc
           {steps.map((step, i) => (
             <li
               key={step}
-              className="text-center font-mono text-[10px] font-medium uppercase tracking-wide text-ink-muted sm:text-xs"
+              className={`text-center font-mono text-[10px] font-medium uppercase tracking-wide sm:text-xs ${
+                isDark ? "text-ink-muted-paper" : "text-ink-muted"
+              }`}
             >
-              <span className="text-accent-strong">{String(i + 1).padStart(2, "0")}</span>
+              <span className={isDark ? "text-ink-accent" : "text-accent-strong"}>
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <br />
               {step}
             </li>

@@ -25,14 +25,14 @@ export function SectionHeading({
         aria-hidden="true"
         className={`pointer-events-none absolute -top-10 select-none font-serif text-[7rem] font-medium leading-none sm:text-[9rem] ${
           align === "center" ? "left-1/2 -translate-x-1/2" : "-left-1 sm:-left-2"
-        } ${isDark ? "text-paper/[0.06]" : "text-ink/[0.05]"}`}
+        } ${isDark ? "text-numeral-dark/25" : "text-numeral/50"}`}
       >
         {index}
       </span>
 
       <p
         className={`relative font-serif text-lg italic ${
-          isDark ? "text-ink-accent" : "text-accent-strong"
+          isDark ? "text-copper-light" : "text-copper-strong"
         }`}
       >
         {eyebrow}

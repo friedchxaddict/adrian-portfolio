@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editable résumé source (Word); only the exported PDF in /public/resume ships
+/resume-source/

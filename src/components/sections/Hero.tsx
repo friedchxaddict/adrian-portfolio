@@ -15,33 +15,33 @@ const THREADS = [
     label: "Frontend",
     d: "M10,30 C140,30 170,100 300,130",
     dot: { x: 143, y: 62.5 },
-    color: "#1a1512",
+    color: "#252b2d",
     width: 2,
-    opacity: 0.55,
+    opacity: 0.6,
   },
   {
     label: "API & services",
     d: "M10,95 C150,95 180,118 300,130",
     dot: { x: 150, y: 106 },
-    color: "#bb5b2e",
+    color: "#397e80",
     width: 2.25,
-    opacity: 0.8,
+    opacity: 0.85,
   },
   {
     label: "QA & release validation",
     d: "M10,165 C150,165 180,142 300,130",
     dot: { x: 150, y: 154 },
-    color: "#55624a",
+    color: "#535d60",
     width: 2.25,
-    opacity: 0.75,
+    opacity: 0.7,
   },
   {
     label: "Infrastructure",
     d: "M10,230 C140,230 170,160 300,130",
     dot: { x: 143, y: 197.5 },
-    color: "#b8862e",
+    color: "#b8734f",
     width: 2,
-    opacity: 0.7,
+    opacity: 0.85,
   },
 ];
 
@@ -50,7 +50,7 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden texture-dots">
       <Container className="grid items-center gap-14 py-20 sm:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-32">
         <div>
-          <p className="font-serif text-lg italic text-accent-strong">Technical Program Manager</p>
+          <p className="font-serif text-lg italic text-copper-strong">Technical Program Manager</p>
 
           <h1 className="mt-3 text-balance font-serif text-5xl font-medium leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-[4.25rem]">
             Adrian Fontanilla
@@ -74,13 +74,15 @@ export function Hero() {
             </ButtonLink>
           </div>
 
-          <div className="mt-10 flex items-center gap-5">
+          {/* py-3 gives a 44px tap target; mt-1 / -mb-2 keep the visible text position
+              and the hero's overall height identical to the 28px version. */}
+          <div className="mt-1 -mb-2 flex items-center">
             <a
               href={site.social.linkedin}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Adrian Fontanilla on LinkedIn"
-              className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="inline-flex items-center gap-2 py-3 text-sm text-ink-muted transition-colors hover:text-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               <LinkedInIcon className="h-4 w-4" />
               LinkedIn
@@ -131,7 +133,7 @@ export function Hero() {
               cy={130}
               r={20}
               fill="none"
-              stroke="var(--color-accent)"
+              stroke="var(--color-copper)"
               strokeWidth={1.5}
               className="hero-converge-ring"
             />

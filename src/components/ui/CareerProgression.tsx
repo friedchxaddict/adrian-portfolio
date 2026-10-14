@@ -12,7 +12,7 @@ export function CareerProgression({ stages }: CareerProgressionProps) {
               aria-hidden="true"
               className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border font-mono text-[11px] font-semibold sm:h-8 sm:w-8 ${
                 i === stages.length - 1
-                  ? "border-accent bg-accent text-paper"
+                  ? "border-copper bg-copper text-paper"
                   : "border-line text-ink-muted"
               }`}
             >

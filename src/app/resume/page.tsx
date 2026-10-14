@@ -34,7 +34,7 @@ export default function ResumePage() {
               href={site.resumeHref}
               target="_blank"
               rel="noreferrer noopener"
-              className="text-sm font-medium text-ink underline decoration-accent/60 decoration-2 underline-offset-[6px] hover:text-accent-strong hover:decoration-accent-strong"
+              className="text-sm font-medium text-ink underline decoration-copper/70 decoration-2 underline-offset-[6px] hover:text-copper-strong hover:decoration-copper-strong"
             >
               Download PDF
             </a>

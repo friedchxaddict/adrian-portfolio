@@ -1,8 +1,7 @@
 /**
  * Central site configuration.
  *
- * IMPORTANT: Fields marked "TODO" are placeholders — nothing here is a fabricated
- * fact. Replace each TODO with the real value before going live.
+ * Nothing here is a fabricated fact — every value is confirmed by Adrian.
  */
 
 export const site = {
@@ -13,8 +12,7 @@ export const site = {
     "Bringing a software development background to technical program leadership, engineering delivery, and cross-functional execution.",
   description:
     "Adrian Fontanilla is a Technical Program Manager with a background in software development and startup technical leadership — focused on engineering delivery, cross-functional execution, and helping teams ship.",
-  // TODO: replace with the real production domain once deployed.
-  url: "https://adrianfontanilla.com",
+  url: "https://adrianfontanilla.vercel.app",
   email: "adrianfontanilla@gmail.com",
   social: {
     linkedin: "https://www.linkedin.com/in/adrian-f-8a722022a",
